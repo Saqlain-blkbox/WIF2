@@ -10,8 +10,8 @@ provider "google" {
   region  = "us-central1"
 }
 
-resource "google_pubsub_topic" "example_topic" {
-  name = "example-topic-${random_id.unique_id.hex}"
+resource "google_pubsub_topic" "pubsub_topic" {
+  name = "wif-topic-${random_id.unique_id.hex}"
 }
   
 resource "random_id" "unique_id" {
